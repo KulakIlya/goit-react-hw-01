@@ -2,8 +2,7 @@ import styles from './Profile.module.css';
 
 import PropTypes from 'prop-types';
 
-const Profile = ({ name, tag, location, image, stats }) => {
-  const { followers, views, likes } = stats;
+const Profile = ({ name, tag, location, image, stats: { followers, views, likes } }) => {
   return (
     <div className={styles.profileCard}>
       <div className={styles.intro}>
