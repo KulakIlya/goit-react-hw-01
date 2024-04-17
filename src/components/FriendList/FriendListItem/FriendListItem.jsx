@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 
 const FriendListItem = ({ avatar, name, isOnline }) => {
-  const status = clsx(styles.status, { [styles.online]: isOnline });
+  const status = clsx(styles.status, isOnline && styles.online);
   return (
     <div>
       <img src={avatar} alt={name} width="48" />
